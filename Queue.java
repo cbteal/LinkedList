@@ -69,6 +69,21 @@ public class Queue extends List
     public Object remove(int index){
         return dequeue();
     }
+    
+    /**
+     * Override delete method because it would compromise the queue data
+     * structure.
+     * 
+     * @int index
+     * @exception when called
+     */
+    public void delete(int index){
+        try{
+            throw new LinkedListException("Delete not usable in queue");
+        }catch(LinkedListException e){
+            System.err.println(e.getMessage());
+        }
+    }
 
     public static void main(String[] args){
         Queue empty = new Queue();
@@ -120,5 +135,7 @@ public class Queue extends List
         a.remove(14);
         a.remove(14);
         System.out.println("a after remove all: " + a.toString());
+        
+        a.delete(1);
     }
 }
