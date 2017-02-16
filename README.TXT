@@ -7,3 +7,5 @@ USER INSTRUCTIONS:
 Files should be in the same folder
 
 Run any of the mains. To implement create a new List, Stack, or Queue and populate it with the supplied methods.
+
+Queue and Stack depend on list class.
