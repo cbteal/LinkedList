@@ -74,6 +74,21 @@ public class Stack extends List
         push(a);
     }
     
+    /**
+     * Override delete method because it would compromise the stack data
+     * structure.
+     * 
+     * @int index
+     * @exception when called
+     */
+    public void delete(int index){
+        try{
+            throw new LinkedListException("Delete not usable in stack");
+        }catch(LinkedListException e){
+            System.err.println(e.getMessage());
+        }
+    }
+    
     public static void main(String[] args){
         Stack empty = new Stack();
         Stack one = new Stack();
@@ -126,5 +141,7 @@ public class Stack extends List
         a.remove(14);
         a.remove(14);
         System.out.println("a after remove all: " + a.toString());
+        
+        a.delete(1);
     }
 }
